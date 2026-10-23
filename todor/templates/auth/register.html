@@ -1,7 +1,46 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block content %}
 
-{% block title %}Registrarse{% endblock %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-4">
+      <div class="card">
+        <div class="card-header">
+          <h1 class="text-center fs-3 my-1">Registrar usuario</h1>
+        </div>
+        <div class="card-body">
+          <form action="" method="post">
+            <div class="mb-3">
+              <label for="username" class="form-label">Nombre de usuario</label>
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                name="username"
+                required
+                minlength="6"
+                maxlength="40"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Contraseña</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                required
+                minlength="6"
+                maxlength="40"
+              />
+            </div>
 
-{% block content %}
-  <h1>Registrarse</h1>
+            <div class="d-grid">
+              <input type="submit" class="btn btn-primary" value="Registrar usuario" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
